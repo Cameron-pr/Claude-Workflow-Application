@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Claude</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header">
+    <button id="sessions-btn" title="All conversations">☰</button>
+    <button id="active-btn" title="Active conversations">⬤</button>
+    <span id="title">
+      <img id="clawd-icon" src="assets/clawd.svg" alt="" width="18" height="15" />
+      Claude
+      <span id="status-text" hidden>
+        <span class="spinner-star" id="header-spinner"></span>
+        <span class="status-word" id="header-word"></span><span class="type-cursor">▊</span>
+        <span id="header-elapsed"></span>
+      </span>
+    </span>
+    <div id="header-buttons">
+      <button id="pin-btn" title="Keep on top">
+        <svg id="pin-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 9V4h1V2H7v2h1v5c0 1.66-1.34 3-3 3v2h5.97v7l1 1 1-1v-7H19v-2c-1.66 0-3-1.34-3-3z"/>
+        </svg>
+      </button>
+      <button id="min-btn" title="Minimize">&#8211;</button>
+      <button id="close-btn" title="Close">&times;</button>
+    </div>
+  </div>
+
+  <div id="content-row">
+    <div id="active-sidebar" hidden>
+      <div id="active-sidebar-header">
+        <span>Active</span>
+        <button id="active-new-btn">+ New</button>
+      </div>
+      <div id="active-sidebar-list"></div>
+    </div>
+
+    <div id="main-pane">
+      <div id="sessions-panel" hidden>
+        <div id="sessions-panel-header">
+          <span>All conversations</span>
+          <button id="new-session-btn">+ New</button>
+        </div>
+        <div id="sessions-list"></div>
+        <div id="archived-toggle-row">
+          <button id="archived-toggle">Show archived</button>
+        </div>
+      </div>
+
+      <div id="messages"></div>
+
+      <div id="toolbar">
+        <div class="toolbar-group">
+          <label class="toolbar-label" for="permission-select">Permission</label>
+          <select id="permission-select" title="Permission mode">
+            <option value="default">Manual</option>
+            <option value="auto">Auto</option>
+            <option value="acceptEdits">Accept Edits</option>
+            <option value="plan">Plan</option>
+            <option value="dontAsk">Don't Ask</option>
+            <option value="bypassPermissions">Bypass</option>
+          </select>
+        </div>
+        <div class="toolbar-group">
+          <label class="toolbar-label" for="model-select">Model</label>
+          <select id="model-select" title="Model">
+            <option value="">Auto</option>
+            <option value="sonnet">Sonnet 5</option>
+            <option value="opus">Opus 5</option>
+            <option value="fable">Fable 5.1</option>
+            <option value="haiku">Haiku 4.5</option>
+          </select>
+        </div>
+        <div class="toolbar-group">
+          <label class="toolbar-label" for="effort-select">Effort</label>
+          <select id="effort-select" title="Effort">
+            <option value="">Default</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="xhigh">XHigh</option>
+            <option value="max">Max</option>
+          </select>
+        </div>
+      </div>
+      <div id="input-row">
+        <textarea id="input" placeholder="Ask about your workflow..." rows="1"></textarea>
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+  <script src="vendor/marked.umd.js"></script>
+  <script src="vendor/purify.min.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

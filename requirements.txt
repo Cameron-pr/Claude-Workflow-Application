@@ -1,0 +1,5 @@
+python-dotenv
+pandas
+pyodbc
+requests
+pywin32
