@@ -6,7 +6,6 @@ A small toolkit of extras for [Claude Code](https://claude.com/claude-code) — 
 
 - **`floating-app/`** — an always-on-top, dark/orange floating chat window that drives the same `claude` CLI / Agent SDK as any other Claude Code frontend. Multiple concurrent conversations, live tool-call transcripts, interactive question/approval prompts, model/effort/permission switchers. See [`floating-app/README.md`](floating-app/README.md) for setup.
 <img width="448" height="591" alt="image" src="https://github.com/user-attachments/assets/74b7a930-c76e-4fd5-b3e4-b8041208072d" />
-<img width="401" height="580" alt="image" src="https://github.com/user-attachments/assets/b531394a-eb41-4a02-af1d-3eefaaadbef2" />
 <img width="569" height="571" alt="image" src="https://github.com/user-attachments/assets/1764373c-541a-4cea-8532-4ac177f4ecfd" />
 
 
